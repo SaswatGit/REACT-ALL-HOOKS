@@ -17,9 +17,9 @@ const UseState = () => {
   return (
     <div className='usestate'>
       <div className='area'>
-        <button className='btn' onClick={()=> decreaseNum()}>-</button>
+        <button className='btn1' onClick={()=> decreaseNum()}>-</button>
         <h1>{num}</h1>
-        <button className='btn' onClick={()=> increaseNum()}>+</button>
+        <button className='btn1' onClick={()=> increaseNum()}>+</button>
       </div>
     </div>
   )

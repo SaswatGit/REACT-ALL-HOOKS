@@ -12,7 +12,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(15, 15, 15);
+    background-color: transparent;
     color: bisque;
     width: 20%;
     display: flex;
@@ -22,13 +22,16 @@
     border-radius: 10px;
 }
 
-.btn{
+.usestate .area .btn1{
     padding: 0.4rem 2rem;
     font-size: 1.5rem;
     border: none;
-    background-color: bisque;
+    border: 1px solid bisque;
     transition: 0.5s;
+    color: bisque;
+    background-color: transparent;
 }
-.btn:hover{
-    background-color: rgb(253, 253, 253);
+.usestate .area .btn1:hover{
+    background-color: bisque;
+    color: black;
 }
