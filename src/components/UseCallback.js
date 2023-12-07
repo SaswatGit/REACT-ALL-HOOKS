@@ -1,9 +1,27 @@
-import React from 'react'
+import { useState, useCallback } from "react";
+import Todos from "./Todos";
 
 const UseCallback = () => {
-  return (
-    <div>UseCallback</div>
-  )
-}
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
 
-export default UseCallback
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = useCallback(() => {
+    setTodos((t) => [...t, "New Todo"]);
+  }, [todos]);
+
+  return (
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
+  );
+};
+
+export default UseCallback;
